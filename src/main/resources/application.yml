@@ -2,7 +2,7 @@
 server:
   port: 8088
   address: localhost
-  context-path: /springboot
+#  context-path: /springboot
 
 spring:
   profiles:
@@ -37,8 +37,8 @@ spring:
 #thymeleaf
   thymeleaf:
     cache: false
-    mode: LEGACYHTML5
-#    mode: HTML5
+#    mode: LEGACYHTML5
+    mode: HTML5
 #redis
   redis:
     database: 0

@@ -1,116 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>简洁大气快速登录注册模板</title>
-    <link rel="stylesheet" href="styles/index.css" th:href="@{styles/index.css}">
-    <style>
-        body {
-            background: #fff url(images/bg.jpg) 50% 0;
-        }
-    </style>
+    <title>Sign Up Login</title>
+    <link rel="stylesheet" href="styles/style.css" th:href="@{styles/style.css}">
 </head>
+
 <body>
-<h1>welcome</h1>
-<div class="login" style="margin-top: 50px;">
-    <div class="header">
-        <div class="switch" id="switch">
-            <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0)" tabindex="7">快速登录</a>
-            <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">快速注册</a>
-            <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
-        </div>
-    </div>
-    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">
-        <!--登录-->
-        <div class="web_login" id="web_login">
-            <div class="login-box">
-                <div class="login_form">
-                    <form name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" action="/login.do"
-                          th:action="@{/login.do}" method="post">
-                        <input type="hidden" name="did" value="0">
-                        <input type="hidden" name="to" value="log">
-                        <div class="uinArea" id="uinArea">
-                            <label class="input-tips" for="u">帐号：</label>
-                            <div class="inputOuter" id="uArea">
 
-                                <input type="text" id="u" name="username" class="inputstyle">
-                            </div>
-                        </div>
-                        <div class="pwdArea" id="pwdArea">
-                            <label class="input-tips" for="p">密码：</label>
-                            <div class="inputOuter" id="pArea">
-                                <input type="password" id="p" name="p" class="inputstyle">
-                            </div>
-                        </div>
-
-                        <div style="padding-left:50px;margin-top:20px;">
-                            <input type="submit" value="登 录" style="width:150px;" class="button_blue">
-                        </div>
-                    </form>
+<div class="cotn_principal">
+    <div class="cont_centrar">
+        <div class="cont_login">
+            <div class="cont_info_log_sign_up">
+                <div class="col_md_login">
+                    <div class="cont_ba_opcitiy">
+                        <h2>LOGIN</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <button class="btn_login" onClick="cambiar_login()">LOGIN</button>
+                    </div>
                 </div>
-
+                <div class="col_md_sign_up">
+                    <div class="cont_ba_opcitiy">
+                        <h2>SIGN UP</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <button class="btn_sign_up" onClick="cambiar_sign_up()">SIGN UP</button>
+                    </div>
+                </div>
             </div>
-
-        </div>
-        <!--登录end-->
-    </div>
-    <div class="qlogin" id="qlogin" style="display: none; ">
-        <div class="web_login">
-            <form name="form2" id="regUser" accept-charset="utf-8"  action="/register.do"
-                  th:action="@{/register.do}" method="post">
-                <input type="hidden" name="to" value="reg">
-                <input type="hidden" name="did" value="0">
-                <ul class="reg_form" id="reg-ul">
-                    <div id="userCue" class="cue">快速注册请注意格式</div>
-                    <li>
-
-                        <label for="user" class="input-tips2">用户名：</label>
-                        <div class="inputOuter2">
-                            <input type="text" id="user" name="user" maxlength="16" class="inputstyle2">
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <label for="passwd" class="input-tips2">密码：</label>
-                        <div class="inputOuter2">
-                            <input type="password" id="passwd" name="passwd" maxlength="16" class="inputstyle2">
-                        </div>
-
-                    </li>
-                    <li>
-                        <label for="passwd2" class="input-tips2">确认密码：</label>
-                        <div class="inputOuter2">
-                            <input type="password" id="passwd2" name="" maxlength="16" class="inputstyle2">
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <label for="email" class="input-tips2">email：</label>
-                        <div class="inputOuter2">
-
-                            <input type="email" id="email" name="email" maxlength="10" class="inputstyle2">
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <div class="inputArea">
-                            <input type="button" id="reg" style="margin-top:10px;margin-left:85px;" class="button_blue"
-                                   value="同意协议并注册"> <a href="#" class="zcxy" target="_blank">注册协议</a>
-                        </div>
-
-                    </li>
-                    <div class="cl"></div>
-                </ul>
-            </form>
+            <div class="cont_back_info">
+                <div class="cont_img_back_grey"><img src="images/po.jpg" th:src="@{images/po.jpg}" alt=""/></div>
+            </div>
+            <div class="cont_forms">
+                <div class="cont_img_back_"><img src="images/po.jpg" th:src="@{images/po.jpg}" alt=""/></div>
+                <div class="cont_form_login">
+                    <a href="#" onClick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                    <h2>LOGIN</h2>
+                    <input type="text" placeholder="Username" id="username" required/>
+                    <input type="password" placeholder="Password" id="password" required/>
+                    <button class="btn_login" onClick="real_login()">LOGIN</button>
+                </div>
+                <div class="cont_form_sign_up">
+                    <a href="#" onClick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+                    <h2>SIGN UP</h2>
+                    <input type="text" placeholder="Username" required id="username1"/>
+                    <input type="password" placeholder="Password" required id="password1"/>
+                    <input type="password" placeholder="Confirm Password" required id="confirmPassword"/>
+                    <input type="text" placeholder="Email" required id="email"/>
+                    <button class="btn_sign_up" onClick="real_register()">SIGN UP</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="jianyi">*推荐使用ie9或以上版本ie浏览器或Chrome内核浏览器访问本站</div>
 </div>
-
 <script src="webjars/jquery/2.2.0/jquery.min.js" th:src="@{webjars/jquery/2.2.0/jquery.min.js}"></script>
+<script src="vender/layer/layer.js" th:src="@{vender/layer/layer.js}"></script>
 <script src="javascripts/index.js" th:src="@{javascripts/index.js}"></script>
+
 </body>
 </html>

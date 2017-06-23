@@ -47,21 +47,17 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-
 	// thymeleaf
 	compile("org.thymeleaf:thymeleaf:3.0.3.RELEASE")
 	compile("org.thymeleaf:thymeleaf-spring4:3.0.2.RELEASE")
 	compile("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.1.1")
-
 	//mybatis pagehelper
 	compile 'com.github.pagehelper:pagehelper:4.1.3'
 	//mybatis-generator-core
 	compile group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.3.3'
 	compile group: 'org.mybatis.generator', name: 'mybatis-generator-maven-plugin', version: '1.3.2'
-
 	//druid
 	compile 'com.alibaba:druid:1.0.26'
-
 	//shiro
 	compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.4.0'
 
@@ -72,26 +68,5 @@ dependencies {
 	compile 'org.webjars:bootstrap:3.3.6'
 	//font-awesome
 	compile 'org.webjars.npm:font-awesome:4.7.0'
-
-
-
-
-
-
-
-	//vue
-//	compile 'org.webjars:vue:2.1.3'
-	//vue-router
-//	compile 'org.webjars.npm:vue-router:2.4.0'
-	//axios
-//	compile 'org.webjars.npm:axios:0.16.1'
-
-
-	//vuex
-//	compile 'org.webjars.npm:vuex:2.2.1'
-	//element-ui
-//	compile 'org.webjars.npm:element-ui:1.3.1'
-	//bootstrap-vue
-//	compile 'org.webjars:bootstrap-vue:0.9.5'
 
 }
