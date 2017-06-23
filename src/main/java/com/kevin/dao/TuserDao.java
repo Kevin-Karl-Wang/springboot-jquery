@@ -3,12 +3,17 @@ package com.kevin.dao;
 import com.kevin.entity.Tuser;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-@Repository("userRepository")
+@Repository("userdao")
 public interface TuserDao {
+    int deleteByPrimaryKey(Integer userId);
 
-    List<Tuser> findAll();
+    int insert(Tuser record);
 
-    List<Tuser> findUserByName(Tuser tuser);
+    int insertSelective(Tuser record);
+
+    Tuser selectByPrimaryKey(Integer userId);
+
+    int updateByPrimaryKeySelective(Tuser record);
+
+    int updateByPrimaryKey(Tuser record);
 }

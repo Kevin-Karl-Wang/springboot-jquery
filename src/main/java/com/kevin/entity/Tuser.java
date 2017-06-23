@@ -7,9 +7,13 @@ public class Tuser {
 
     private String userName;
 
-    private String nickName;
-
     private String password;
+
+    private String userNick;
+
+    private String userEmail;
+
+    private Byte userType;
 
     private Byte sex;
 
@@ -31,20 +35,36 @@ public class Tuser {
         this.userName = userName == null ? null : userName.trim();
     }
 
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName == null ? null : nickName.trim();
-    }
-
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    public String getUserNick() {
+        return userNick;
+    }
+
+    public void setUserNick(String userNick) {
+        this.userNick = userNick == null ? null : userNick.trim();
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail == null ? null : userEmail.trim();
+    }
+
+    public Byte getUserType() {
+        return userType;
+    }
+
+    public void setUserType(Byte userType) {
+        this.userType = userType;
     }
 
     public Byte getSex() {
@@ -61,17 +81,5 @@ public class Tuser {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
-    }
-
-    @Override
-    public String toString() {
-        return "Tuser{" +
-                "userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", nickName='" + nickName + '\'' +
-                ", password='" + password + '\'' +
-                ", sex=" + sex +
-                ", createTime=" + createTime +
-                '}';
     }
 }
